@@ -66,24 +66,24 @@
 ## Classes
    ```
    class myClass {
-     var one: Bool
-     var two: Double
-     var three: String?
-     init(arg1: Bool, arg2: Double, arg3: String?) {
-         one = arg1
-         two = arg2
-         three = arg3
-     }
-     init() {
-         one = true
-         two = 15.5
-         three = nil
-     }
-     deinit {
-         one = false
-         two = 0.0
-         three = nil
-     }
+       var one: Bool
+       var two: Double
+       var three: String?
+       init(arg1: Bool, arg2: Double, arg3: String?) {
+           one = arg1
+           two = arg2
+           three = arg3
+       }
+       init() {
+           one = true
+           two = 15.5
+           three = nil
+       }
+       deinit {
+           one = false
+           two = 0.0
+           three = nil
+       }
    }
    ```
   * __Creating new instances__
@@ -103,19 +103,19 @@
   * __this? self?__ self.
     ```
     class selfClass {
-      var one: Bool
-      var two: Double
-      init() {
-          one = true
-          two = 15.5
-      }
-      func updateTwo() {
-          if self.one == true {
-              self.one == false
-          } else {
-              self.one == true
-          }
-      }
+        var one: Bool
+        var two: Double
+        init() {
+            one = true
+            two = 15.5
+        }
+        func updateTwo() {
+            if self.one == true {
+                self.one == false
+            } else {
+                self.one == true
+            }
+        }
     }
     ```
 
@@ -125,8 +125,8 @@
   * __Computed properties?__ Allowed for in Swift.
     ```
     struct propertiesStruct{
-      var index: UInt = 0
-      var value: String = "My String"
+        var index: UInt = 0
+        var value: String = "My String"
     }
 
     class propertiesClass {
@@ -151,10 +151,10 @@
   * __How is it used?__
     ```
     protocol class1 {
-      var name: String { get set }
-      var id: Int { get }
+        var name: String { get set }
+        var id: Int { get }
 
-      func profile() -> String
+        func profile() -> String
     }
 
     class class2: class1 {
