@@ -64,28 +64,6 @@
     ```
 
 ## Classes
-    ```
-    class myClass {
-      var one: Bool
-      var two: Double
-      var three: String?
-      init(arg1: Bool, arg2: Double, arg3: String?) {
-          one = arg1
-          two = arg2
-          three = arg3
-      }
-      init() {
-          one = true
-          two = 15.5
-          three = nil
-      }
-      deinit {
-          one = false
-          two = 0.0
-          three = nil
-      }
-    }
-    ```
   * __Creating new instances__
     ```
     let someInstance = myClass()
