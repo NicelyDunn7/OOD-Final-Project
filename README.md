@@ -64,65 +64,86 @@
     ```
 
 ## Classes
-  ```
-  class myClass {
-    var one: Bool
-    var two: Double
-    var three: String?
-    init(arg1: Bool, arg2: Double, arg3: String?) {
-        one = arg1
-        two = arg2
-        three = arg3
+    ```
+    class myClass {
+      var one: Bool
+      var two: Double
+      var three: String?
+      init(arg1: Bool, arg2: Double, arg3: String?) {
+          one = arg1
+          two = arg2
+          three = arg3
+      }
+      init() {
+          one = true
+          two = 15.5
+          three = nil
+      }
+      deinit {
+          one = false
+          two = 0.0
+          three = nil
+      }
     }
-    init() {
-        one = true
-        two = 15.5
-        three = nil
-    }
-    deinit {
-        one = false
-        two = 0.0
-        three = nil
-    }
-  }
-  ```
+    ```
   * __Creating new instances__
-  ```
-  let someInstance = myClass()
-  ```
+    ```
+    let someInstance = myClass()
+    ```
   * __Constructing/initializing__
-  ```
-  var someOtherInstance: myClass? = myClass(arg1: true, arg2: 19.2, arg3: "Hello, World!")
-  ```
+    ```
+    var someOtherInstance: myClass? = myClass(arg1: true, arg2: 19.2, arg3: "Hello, World!")
+    ```
   * __Destructing/de-initializing__ Requires a deinit method to be defined inside the class.
-  ```
-  someOtherInstance = nil
-  ```
+    ```
+    someOtherInstance = nil
+    ```
 
 ## Instance reference name in data type (class)
   * __this? self?__ self.
-  ```
-  class selfClass {
-    var one: Bool
-    var two: Double
-    init() {
-        one = true
-        two = 15.5
+    ```
+    class selfClass {
+      var one: Bool
+      var two: Double
+      init() {
+          one = true
+          two = 15.5
+      }
+      func updateTwo() {
+          if self.one == true {
+              self.one == false
+          } else {
+              self.one == true
+          }
+      }
     }
-    func updateTwo() {
-        if self.one == true {
-            self.one == false
-        } else {
-            self.one == true
-        }
-    }
-  }
-  ```
+    ```
 
 ## Properties
-  * __Getters and setters…write your own or built in?__ Provided by Swift for computed properties. Example in Swift Playground.
-  * __Backing variables?__ Allowed for in Swift. Example in Swift Playground.
-  * __Computed properties?__ Allowed for in Swift. Example in Swift Playground.
+  * __Getters and setters…write your own or built in?__ Provided by Swift for computed properties.
+  * __Backing variables?__ Allowed for in Swift.
+  * __Computed properties?__ Allowed for in Swift.
+    ```
+    struct propertiesStruct{
+      var index: UInt = 0
+      var value: String = "My String"
+    }
+
+    class propertiesClass {
+        var a: UInt = 3
+        var b: String = "Hello, "
+        var thing: propertiesStruct {
+            get {
+                let x = a + 1
+                let y = b + String(x)
+                return propertiesStruct(index: x, value: y)
+            }
+            set(newString) {
+                b = "World!"
+            }
+        }
+    }
+    ```
 
 ## Interfaces / protocols
   * __What does the language support?__ Swift supports the use of protocols.
