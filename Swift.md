@@ -312,7 +312,7 @@
             self.singletonVar = singletonVar
         }
     }
-print(Singleton.shared.singletonVar)
+    print(Singleton.shared.singletonVar)
     ```
   * __Can it be made thread-safe?__ Yes, it can be made thread-safe.
   * __Can the singleton instance be lazily instantiated?__ One approach to singletons is to have them be a global, lazily instantiated object; however, this is not the recommended approach (the provided code example is).
